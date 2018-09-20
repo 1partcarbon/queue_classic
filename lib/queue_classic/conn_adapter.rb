@@ -95,7 +95,7 @@ module QC
        nil, '', #opts, tty
        url.path.gsub("/",""), # database name
        url.user,
-       url.password
+       URI.decode(url.password)
       ]
     end
 
